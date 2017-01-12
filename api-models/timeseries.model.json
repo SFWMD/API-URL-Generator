@@ -1,0 +1,80 @@
+{
+	"label": "TimeSeries",
+	"description": "The TimeSeries data service is a RESTful web service which supplies DCVP data. The data can be requested as raw or interpolated, and returned in XML or JSON format.",
+	"baseUrl": "http://sfwmd.gov/v1/data/timeseries", 
+	"arguments": [
+		{
+ 			"label": "Names",
+ 			"name": "names",
+ 			"description": "One or more comma separated site IDs. This field is required",
+ 			"type": "text",
+ 			"required": true
+ 		},
+		{
+ 			"label": "Begin Date Time",
+ 			"name": "beginDateTime",
+ 			"description": "The start of the timeseries period. This field is required",
+ 			"type": "datetime",
+ 			"datetimeFormat": "YYYY-MM-DDHH:mm:ss:SSS",
+ 			"required": true
+		},
+ 		{
+ 			"label": "End Date Time",
+ 			"name": "endDateTime",
+ 			"description": "The end of the timeseries period. This field is required",
+ 			"type": "datetime",
+ 			"datetimeFormat": "YYYY-MM-DDHH:mm:ss:SSS",
+ 			"required": true
+ 		},
+ 		{
+ 			"label": "Format",
+ 			"name": "format",
+ 			"description": "Response format. Default is XML",
+ 			"type": "choice",
+ 			"choices": [
+ 				"",
+ 				"json",
+ 				"xml"
+ 			],
+ 			"required": false
+ 		},
+ 		{
+ 			"label": "Calculation",
+ 			"name": "calculation",
+ 			"description": "Optional calculation for data analysis",
+ 			"type": "choice",
+ 			"choices": [
+ 				"",
+ 				"MEAN",
+ 				"MAX",
+ 				"MIN",
+ 				"SUM"
+ 			],
+ 			"required": false
+ 		},
+ 		{
+ 			"label": "Timespan Unit",
+ 			"name": "timespanUnit",
+ 			"description": "Time units for the specified timeseries period",
+ 			"type": "choice",
+ 			"choices": [
+ 				"",
+ 				"YEAR",
+ 				"MONTH",
+ 				"WEEK",
+ 				"DAY",
+ 				"HOUR",
+ 				"MINUTE",
+ 				"SECOND"
+ 			],
+ 			"required": false
+ 		},
+ 		{
+ 			"label": "Timespan Value",
+ 			"name": "timespanValue",
+ 			"description": "The number units of the timespan.",
+ 			"type": "number",
+ 			"required": false
+ 		}	
+	]
+}

@@ -1,0 +1,33 @@
+{
+	"label": "Realtime",
+	"description": "The Real Time data service is a RESTful web service which provides the latest reading for the specified site or time series identifier in XML or JSON format",
+	"baseUrl": "http://sfwmd.gov/v1/data/realtime", 
+	"arguments": [
+		{
+ 			"label": "Sites",
+ 			"name": "sites",
+ 			"description": "Comma separated site names. Either this or the Timeseries argument is required",
+ 			"type": "text",
+ 			"required": false
+ 		},
+ 		{
+ 			"label": "Timeseries",
+ 			"name": "timeseries",
+ 			"description": "Comma separated time series names. Either this or the Sites argument is required",
+ 			"type": "text",
+ 			"required": false
+ 		},
+ 		{
+ 			"label": "Format",
+ 			"name": "format",
+ 			"description": "Response format. Default it XML",
+ 			"type": "choice",
+ 			"choices": [
+ 				"",
+ 				"json",
+ 				"xml"
+ 			],
+ 			"required": false
+ 		}
+	]
+}

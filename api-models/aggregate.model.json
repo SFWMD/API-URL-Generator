@@ -1,0 +1,81 @@
+{
+	"label": "Aggregate",
+	"description": "The Aggregate data service is a RESTful web service which supplies aggregated DCVP data. The data can be requested in XML or JSON format",
+	"baseUrl": "http://sfwmd.gov/v1/data/aggregate", 
+	"arguments": [
+		{
+ 			"label": "Station ID",
+ 			"name": "stationId",
+ 			"description": "Station ID for request. This field is required",
+ 			"type": "text",
+ 			"required": true
+ 		},
+ 		{
+ 			"label": "Begin Date Time",
+ 			"name": "beginDateTime",
+ 			"description": "The start of the request period. This field is required",
+ 			"type": "datetime",
+ 			"datetimeFormat": "YYYY-MM-DDHH:mm:ss:SSS",
+ 			"required": true
+ 		},
+ 		{
+ 			"label": "End Date Time",
+ 			"name": "endDateTime",
+ 			"description": "The end of the request period. This field is required",
+ 			"type": "datetime",
+ 			"datetimeFormat": "YYYY-MM-DDHH:mm:ss:SSS",
+ 			"required": true
+ 		},
+ 		{
+ 			"label": "Format",
+ 			"name": "format",
+ 			"description": "Response format. Default is XML",
+ 			"type": "choice",
+ 			"choices": [
+ 				"",
+ 				"json",
+ 				"xml"
+ 			],
+ 			"required": false
+ 		},
+ 		{
+ 			"label": "Calculation",
+ 			"name": "calculation",
+ 			"description": "Specifies hwo the data should be aggregated. This field is required",
+ 			"type": "choice",
+ 			"choices": [
+ 				"",
+ 				"MEAN",
+ 				"MAX",
+ 				"MIN",
+ 				"SUM",
+ 				"MEDI"
+ 			],
+ 			"required": true
+ 		},
+ 		{
+ 			"label": "Timespan Unit",
+ 			"name": "timespanUnit",
+ 			"description": "Time units for the specified time period",
+ 			"type": "choice",
+ 			"choices": [
+ 				"",
+ 				"YEAR",
+ 				"MONTH",
+ 				"WEEK",
+ 				"DAY",
+ 				"HOUR",
+ 				"MINUTE",
+ 				"SECOND"
+ 			],
+ 			"required": true
+ 		},
+ 		{
+ 			"label": "Timespan Value",
+ 			"name": "timespanValue",
+ 			"description": "The number units of the timespan.",
+ 			"type": "number",
+ 			"required": false
+ 		}
+	]
+}

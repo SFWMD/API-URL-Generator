@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Data API URL Generator</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+   	<link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/angular-csp.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	
+	<script src="libs/jquery.min.js"></script>
+	<script src="libs/bootstrap.min.js"></script>
+	<script src="libs/promise.min.js"></script>
+	<script src="libs/moment.min.js"></script>
+	<script src="https://unpkg.com/flatpickr"></script>	
+	<script src="libs/matchHeight.js"></script>
+    <script src="libs/angular.js"></script>
+    <script src="libs/angular-route.min.js"></script>
+    
+    <script src="config.js"></script>
+    
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+    
+    <script src="services/view.service.js"></script>
+    <script src="services/date-picker.service.js"></script>
+    <script src="services/url-generator.service.js"></script>
+    
+    <script src="generator/generator.module.js"></script>
+    <script src="generator/generator.component.js"></script>
+        
+  </head>
+  <body>
+  	<div ng-view></div>
+  </body>
+</html>

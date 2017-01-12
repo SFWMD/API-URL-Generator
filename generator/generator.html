@@ -1,0 +1,44 @@
+<div class="base-font text-center container">
+	<h2 class="col-xs-12 animated bounceInDown api-title text-right">{{ apiModel.label }} URL Generator</h2>
+	<h4 class="col-xs-12 animated bounceInDown api-description text-left">{{ apiModel.description}}</h4>
+	
+	<div class="col-lg-4 col-xs-12 animated bounceInDown" ng-repeat="argument in apiModel.arguments">
+		<div class="col-xs-12 argument card">
+			<h3 class="col-xs-12 argument-label">{{ argument.label }}</h3>
+			<p class="col-xs-12 argument-description">{{ argument.description }}</p>
+			
+			<!-- Text Input -->
+			<div class="col-xs-12" ng-if="argument.type == 'text'">
+				<input class="card argument-input text-center" type="text" ng-attr-placeholder="{{ argument.label }}" ng-model="argument.value">
+			</div>
+			
+			<!-- Number Input -->
+			<div class="col-xs-12" ng-if="argument.type == 'number'">
+				<input class="card argument-input text-center" type="number" ng-attr-placeholder="{{ argument.label }}" ng-model="argument.value">
+			</div>
+			
+			<!-- Datetime -->
+			<div class="col-xs-12" ng-if="argument.type == 'datetime'">
+				<input class="card argument-input date-picker text-center" ng-attr-placeholder="{{ argument.label}}" ng-model="argument.value"> 
+			</div>
+			
+			<!-- Choice -->
+			<div class="col-xs-12" ng-if="argument.type == 'choice'">
+				<select class="card argument-select text-center" ng-model="argument.value">
+					<option value="{{ choice }}" ng-repeat="choice in argument.choices">{{ choice }}</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-xs-12 card text-center animated bounceInUp results-display">
+		<h4 class="col-xs-12 col-md-2 small-title">Generated URL: </h4>
+		<p class="col-xs-12 col-md-10 text-left">{{ generatedUrl }}</p>
+	</div>
+	
+	<div class="col-xs-12 animated bounceInUp">
+		<button class="card button" ng-click="openInNewWindow(generatedUrl)">
+			Try it out
+		</button>
+	</div>
+</div>

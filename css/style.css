@@ -1,0 +1,79 @@
+.api-title {
+	margin-top: 50px;
+}
+
+.api-title, .argument-label {
+	color: #0077a2;
+}
+
+.api-description {
+	line-height: 21px;
+	margin-bottom: 35px;
+}
+
+.argument {
+	margin-bottom: 30px;
+}
+
+.argument, .results-display {
+	padding-bottom: 25px;
+	border-radius: 4px;
+	background-color: #F9F9F9;
+}
+
+.argument-label{
+	margin-bottom: 16px;
+}
+
+.api-description, .argument-description {
+	color: #777;
+}
+
+.api-description, .argument-description, .results-display>p {
+	letter-spacing: .1em;
+}
+
+.argument-input, .argument-select {
+	border-color: #ccc;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 1px;
+	color: #555;
+	float: none;
+	padding: 6px 12px;
+	width: 200px;
+}
+
+.argument-input, .argument-select {
+	border: none;
+	border-radius: 4px;
+	color: #767E82;
+}
+
+.results-display {
+	background-color: #E6E6E6; 
+	padding-top : 30px;
+	padding-bottom: 30px;
+	margin-bottom: 10px;
+}
+
+.results-display>.small-title {
+	color: #0077a2;
+}
+
+.results-display>p {
+	margin-top: 10px;
+	word-break: break-all;
+	color: #555;
+}
+
+.button {
+	background-color: #607d8b;
+    color: white;
+    font-weight: bold;
+    border: 0;
+    border-radius: 5px;
+    padding: 1em;
+    margin: 1em;
+    min-width: 129px;
+}
